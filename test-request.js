@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
 /**
- * Test-Client für Claude Code API Server
+ * Automated API Test Suite
  *
- * Sendet Test-Requests an den Server um die Funktionalität zu prüfen
+ * Tests all API endpoints with colorized console output for validation.
  */
 
 const http = require('http');
