@@ -1,10 +1,8 @@
 /**
- * Claude Code Streaming Executor
+ * Server-Sent Events Streaming Executor
  *
- * Stream-JSON Proxy: Nimmt stream-json Input, gibt direkt an Claude CLI weiter,
- * streamt Output als Server-Sent Events (SSE) zurück.
- *
- * KEIN Parsing, KEINE Konvertierung - reines Pass-Through!
+ * Streams Claude CLI responses in real-time via SSE (Server-Sent Events).
+ * Pure pass-through streaming without parsing or buffering.
  */
 
 const { spawn } = require('child_process');
