@@ -17,7 +17,7 @@ module.exports = {
 
   // Claude CLI Konfiguration
   claude: {
-    cliPath: process.env.CLAUDE_CLI_PATH || '/home/mdoehler/.npm-global/bin/claude',
+    cliPath: process.env.CLAUDE_CLI_PATH || 'claude',
     defaultModel: process.env.CLAUDE_DEFAULT_MODEL || 'sonnet', // Model-Alias (sonnet, opus, haiku)
     defaultMaxTokens: parseInt(process.env.CLAUDE_DEFAULT_MAX_TOKENS) || 2000,
     defaultTemperature: parseFloat(process.env.CLAUDE_DEFAULT_TEMPERATURE) || 0.3,

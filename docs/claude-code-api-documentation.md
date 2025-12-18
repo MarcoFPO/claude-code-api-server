@@ -1,8 +1,8 @@
 # Claude Code API Server - Vollständige Dokumentation
 
-**Server:** http://10.1.1.105:3001
+**Server:** http://localhost:3001
 **Version:** 1.0.0
-**Basis-URL:** http://10.1.1.105:3001
+**Basis-URL:** http://localhost:3001
 
 ---
 
@@ -38,7 +38,7 @@ Der Claude Code API Server bietet zwei API-Formate für maximale Kompatibilität
 ### Endpunkt
 
 ```
-POST http://10.1.1.105:3001/v1/messages
+POST http://localhost:3001/v1/messages
 ```
 
 ### Request Format
@@ -102,7 +102,7 @@ Jede Nachricht im `messages` Array:
 
 **Request:**
 ```bash
-curl -X POST http://10.1.1.105:3001/v1/messages \
+curl -X POST http://localhost:3001/v1/messages \
   -H "Content-Type: application/json" \
   -H "X-Request-ID: user-123-$(date +%s)" \
   -d '{
@@ -144,7 +144,7 @@ curl -X POST http://10.1.1.105:3001/v1/messages \
 
 **Request:**
 ```bash
-curl -X POST http://10.1.1.105:3001/v1/messages \
+curl -X POST http://localhost:3001/v1/messages \
   -H "Content-Type: application/json" \
   -d '{
     "model": "sonnet",
@@ -163,7 +163,7 @@ curl -X POST http://10.1.1.105:3001/v1/messages \
 
 **Request:**
 ```bash
-curl -X POST http://10.1.1.105:3001/v1/messages \
+curl -X POST http://localhost:3001/v1/messages \
   -H "Content-Type: application/json" \
   -H "X-Request-ID: conversation-xyz" \
   -d '{
@@ -194,7 +194,7 @@ curl -X POST http://10.1.1.105:3001/v1/messages \
 ### Endpunkt
 
 ```
-POST http://10.1.1.105:3001/v1/chat/completions
+POST http://localhost:3001/v1/chat/completions
 ```
 
 ### Request Format
@@ -278,7 +278,7 @@ data: [DONE]
 
 **Request:**
 ```bash
-curl -X POST http://10.1.1.105:3001/v1/chat/completions \
+curl -X POST http://localhost:3001/v1/chat/completions \
   -H "Content-Type: application/json" \
   -d '{
     "model": "sonnet",
@@ -322,7 +322,7 @@ curl -X POST http://10.1.1.105:3001/v1/chat/completions \
 
 **Request:**
 ```bash
-curl -X POST http://10.1.1.105:3001/v1/chat/completions \
+curl -X POST http://localhost:3001/v1/chat/completions \
   -H "Content-Type: application/json" \
   -d '{
     "model": "sonnet",
@@ -343,7 +343,7 @@ curl -X POST http://10.1.1.105:3001/v1/chat/completions \
 
 **Request:**
 ```bash
-curl -X POST http://10.1.1.105:3001/v1/chat/completions \
+curl -X POST http://localhost:3001/v1/chat/completions \
   -H "Content-Type: application/json" \
   -N \
   -d '{
@@ -364,7 +364,7 @@ curl -X POST http://10.1.1.105:3001/v1/chat/completions \
 
 **Request:**
 ```bash
-curl -X POST http://10.1.1.105:3001/v1/chat/completions \
+curl -X POST http://localhost:3001/v1/chat/completions \
   -H "Content-Type: application/json" \
   -d '{
     "model": "sonnet",
@@ -390,7 +390,7 @@ Hallo! Wie kann ich dir helfen?
 ### Endpunkt
 
 ```
-POST http://10.1.1.105:3001/api/rca
+POST http://localhost:3001/api/rca
 ```
 
 ### Request Format
@@ -426,7 +426,7 @@ Vereinfachtes Format für Root Cause Analysis Use-Cases.
 
 **Request:**
 ```bash
-curl -X POST http://10.1.1.105:3001/api/rca \
+curl -X POST http://localhost:3001/api/rca \
   -H "Content-Type: application/json" \
   -d '{
     "prompt": "Analysiere folgendes Problem: Webserver antwortet mit 502 Bad Gateway. Load: 0.5, Memory: 20% frei, Disk: 50% frei. Nginx-Logs zeigen: upstream timeout nach 60s.",
@@ -462,11 +462,11 @@ Der Server unterstützt optionale Authentifizierung. Wenn aktiviert:
 
 1. **Login:**
 ```bash
-curl -X POST http://10.1.1.105:3001/auth/login \
+curl -X POST http://localhost:3001/auth/login \
   -H "Content-Type: application/json" \
   -d '{
     "username": "demo",
-    "password": "demo123"
+    "password": "your_password"
   }'
 ```
 
@@ -483,7 +483,7 @@ curl -X POST http://10.1.1.105:3001/auth/login \
 
 2. **API Request mit Token:**
 ```bash
-curl -X POST http://10.1.1.105:3001/v1/chat/completions \
+curl -X POST http://localhost:3001/v1/chat/completions \
   -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIs..." \
   -H "Content-Type: application/json" \
   -d '{ ... }'
@@ -492,7 +492,7 @@ curl -X POST http://10.1.1.105:3001/v1/chat/completions \
 #### API Key Authentication
 
 ```bash
-curl -X POST http://10.1.1.105:3001/v1/chat/completions \
+curl -X POST http://localhost:3001/v1/chat/completions \
   -H "Authorization: Bearer demo-api-key" \
   -H "Content-Type: application/json" \
   -d '{ ... }'
@@ -602,7 +602,7 @@ Der Server nutzt Claude's `--session-id` Feature für persistente Conversations:
 #### Session-Liste abrufen
 
 ```bash
-curl -X GET http://10.1.1.105:3001/v1/sessions \
+curl -X GET http://localhost:3001/v1/sessions \
   -H "Authorization: Bearer <token>"
 ```
 
@@ -625,7 +625,7 @@ curl -X GET http://10.1.1.105:3001/v1/sessions \
 #### Session beenden
 
 ```bash
-curl -X DELETE http://10.1.1.105:3001/v1/sessions/user-123-1734185905 \
+curl -X DELETE http://localhost:3001/v1/sessions/user-123-1734185905 \
   -H "Authorization: Bearer <token>"
 ```
 
@@ -765,7 +765,7 @@ Was ist das Problem?
 ### Health Endpoint
 
 ```bash
-curl http://10.1.1.105:3001/health
+curl http://localhost:3001/health
 ```
 
 **Response:**
@@ -781,7 +781,7 @@ curl http://10.1.1.105:3001/health
 ### Model List
 
 ```bash
-curl http://10.1.1.105:3001/v1/models
+curl http://localhost:3001/v1/models
 ```
 
 **Response:**
@@ -822,7 +822,7 @@ import requests
 
 # Anthropic Format
 def call_anthropic_api(prompt, session_id=None):
-    url = "http://10.1.1.105:3001/v1/messages"
+    url = "http://localhost:3001/v1/messages"
     headers = {
         "Content-Type": "application/json",
         "X-Request-ID": session_id or f"python-{int(time.time())}"
@@ -839,7 +839,7 @@ def call_anthropic_api(prompt, session_id=None):
 
 # OpenAI Format
 def call_openai_api(prompt):
-    url = "http://10.1.1.105:3001/v1/chat/completions"
+    url = "http://localhost:3001/v1/chat/completions"
     data = {
         "model": "sonnet",
         "messages": [
@@ -861,7 +861,7 @@ const axios = require('axios');
 
 // OpenAI Format
 async function callClaudeAPI(prompt) {
-  const response = await axios.post('http://10.1.1.105:3001/v1/chat/completions', {
+  const response = await axios.post('http://localhost:3001/v1/chat/completions', {
     model: 'sonnet',
     messages: [
       { role: 'user', content: prompt }
@@ -875,7 +875,7 @@ async function callClaudeAPI(prompt) {
 // Streaming
 async function callClaudeStreaming(prompt) {
   const response = await axios.post(
-    'http://10.1.1.105:3001/v1/chat/completions',
+    'http://localhost:3001/v1/chat/completions',
     {
       model: 'sonnet',
       messages: [{ role: 'user', content: prompt }],
@@ -908,7 +908,7 @@ callClaudeAPI('Erkläre Docker').then(console.log);
 
 ```bash
 # Einfacher Request
-curl -X POST http://10.1.1.105:3001/v1/chat/completions \
+curl -X POST http://localhost:3001/v1/chat/completions \
   -H "Content-Type: application/json" \
   -d '{
     "model": "sonnet",
@@ -917,7 +917,7 @@ curl -X POST http://10.1.1.105:3001/v1/chat/completions \
 
 # Mit Session
 SESSION_ID="my-session-$(date +%s)"
-curl -X POST http://10.1.1.105:3001/v1/messages \
+curl -X POST http://localhost:3001/v1/messages \
   -H "Content-Type: application/json" \
   -H "X-Request-ID: $SESSION_ID" \
   -d '{
@@ -925,7 +925,7 @@ curl -X POST http://10.1.1.105:3001/v1/messages \
     "messages": [{"role": "user", "content": "Erste Frage"}]
   }'
 
-curl -X POST http://10.1.1.105:3001/v1/messages \
+curl -X POST http://localhost:3001/v1/messages \
   -H "Content-Type: application/json" \
   -H "X-Request-ID: $SESSION_ID" \
   -d '{

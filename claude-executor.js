@@ -172,9 +172,7 @@ class ClaudeExecutor {
         stdio: ['pipe', 'pipe', 'pipe'],
         env: {
           ...process.env,
-          HOME: '/home/mdoehler',
-          NODE_ENV: process.env.NODE_ENV,
-          PATH: `${process.env.PATH || ''}:/home/mdoehler/.npm-global/bin:/usr/local/bin:/usr/bin:/bin`
+          NODE_ENV: process.env.NODE_ENV
         }
       });
 

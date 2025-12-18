@@ -9,7 +9,7 @@ Der Claude Code API Server ist vollständig eingerichtet und läuft produktiv.
 ## 📁 Projektstruktur
 
 ```
-/home/mdoehler/claude-code-api-local/
+/path/to/claude-code-api-server/
 ├── server.js                   # Haupt-Server (Express App)
 ├── config.js                   # Zentrale Konfiguration
 ├── logger.js                   # Winston Logger Setup
@@ -23,7 +23,7 @@ Der Claude Code API Server ist vollständig eingerichtet und läuft produktiv.
 ├── test-request.js             # Test-Suite
 └── .gitignore                  # Git Ignore Rules
 
-/home/mdoehler/claude-code-api-local.js → Symlink zum Server
+/path/to/claude-code-api-server.js → Symlink zum Server
 ```
 
 ---
@@ -35,7 +35,7 @@ Service: claude-code-api.service
 Status:  ✅ Active (running)
 Enabled: ✅ Yes (startet automatisch beim Boot)
 Port:    3001
-User:    mdoehler
+User:    youruser
 ```
 
 **Systemd Service-Datei**: `/etc/systemd/system/claude-code-api.service`
@@ -95,7 +95,7 @@ Zeigt verfügbare Endpoints und Konfiguration.
 
 **Test ausführen:**
 ```bash
-cd /home/mdoehler/claude-code-api-local
+cd /path/to/claude-code-api-server
 npm test
 ```
 
@@ -126,7 +126,7 @@ sudo journalctl -u claude-code-api -n 100
 
 ### Manuelle Ausführung (für Debugging)
 ```bash
-cd /home/mdoehler/claude-code-api-local
+cd /path/to/claude-code-api-server
 node server.js
 ```
 
@@ -138,7 +138,7 @@ node server.js
 |-----------|------|
 | **Port** | 3001 |
 | **Host** | 0.0.0.0 (alle Interfaces) |
-| **Claude CLI** | /home/mdoehler/.npm-global/bin/claude |
+| **Claude CLI** | claude |
 | **Default Model** | sonnet |
 | **Timeout** | 120 Sekunden |
 | **Rate Limiting** | ✅ Aktiv (10 Requests/Minute) |
@@ -260,7 +260,7 @@ sudo journalctl -u claude-code-api -n 50
 sudo lsof -i :3001
 
 # Manuell starten für Details
-cd /home/mdoehler/claude-code-api-local
+cd /path/to/claude-code-api-server
 node server.js
 ```
 
@@ -350,12 +350,12 @@ curl http://localhost:3001/health
 
 3. **Regelmäßige Tests:**
    ```bash
-   cd /home/mdoehler/claude-code-api-local && npm test
+   cd /path/to/claude-code-api-server && npm test
    ```
 
 4. **Updates:**
    ```bash
-   cd /home/mdoehler/claude-code-api-local
+   cd /path/to/claude-code-api-server
    npm update
    sudo systemctl restart claude-code-api
    ```

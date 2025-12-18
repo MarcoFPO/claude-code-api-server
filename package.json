@@ -14,7 +14,7 @@
     "n8n",
     "openai-compatible"
   ],
-  "author": "mdoehler",
+  "author": "MarcoFPO",
   "license": "MIT",
   "dependencies": {
     "express": "^4.18.2",

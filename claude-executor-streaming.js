@@ -64,7 +64,6 @@ class ClaudeStreamingExecutor {
       stdio: ['pipe', 'pipe', 'pipe'],
       env: {
         ...process.env,
-        HOME: '/home/mdoehler',
         NODE_ENV: process.env.NODE_ENV
       }
     });

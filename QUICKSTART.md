@@ -22,7 +22,7 @@ sudo journalctl -u claude-code-api -f
 curl http://localhost:3001/health
 
 # Vollständiger Test
-cd /home/mdoehler/claude-code-api-local
+cd /path/to/claude-code-api-server
 npm test
 ```
 
@@ -87,7 +87,7 @@ sudo journalctl -u claude-code-api -n 100
 sudo lsof -i :3001
 
 # Manuell starten (für Debugging)
-cd /home/mdoehler/claude-code-api-local
+cd /path/to/claude-code-api-server
 node server.js
 ```
 
