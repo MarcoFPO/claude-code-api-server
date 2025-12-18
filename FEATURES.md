@@ -47,7 +47,7 @@
 - **Klare Dokumentation**: README, QUICKSTART, Beispiele
 - **Test-Suite**: Automatisierte Tests für alle Endpoints
 - **Ausführliche Kommentare**: Code auf Deutsch dokumentiert
-- **Environment Config**: Alle Parameter über .env steuerbar
+- **Environment Config**: Alle Parameter über Umgebungsvariablen steuerbar
 - **Debugging-Tools**: Test-Client mit farbiger Ausgabe
 
 ## 🚀 Performance

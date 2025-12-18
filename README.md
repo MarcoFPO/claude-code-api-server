@@ -24,9 +24,6 @@ cd claude-code-api-server
 # Install dependencies
 npm install
 
-# Copy environment template
-cp .env.example .env
-
 # Start the server
 node server.js
 \`\`\`
@@ -43,15 +40,18 @@ Server will be running at \`http://localhost:3001\`
 
 ### Configure Environment
 
-Copy \`.env.example\` to \`.env\` and configure:
+The server can be configured via environment variables. All settings have sensible defaults.
 
+**Optional Configuration:**
 \`\`\`env
-PORT=3001
-HOST=0.0.0.0
-CLAUDE_CLI_PATH=claude
-CLAUDE_DEFAULT_MODEL=sonnet
-RATE_LIMIT_ENABLED=true
+PORT=3001                      # Server port (default: 3001)
+HOST=0.0.0.0                   # Server host (default: 0.0.0.0)
+CLAUDE_CLI_PATH=claude         # Path to Claude CLI (default: claude)
+CLAUDE_DEFAULT_MODEL=sonnet    # Default model (default: sonnet)
+RATE_LIMIT_ENABLED=true        # Enable rate limiting (default: true)
 \`\`\`
+
+See `config.js` for all available configuration options.
 
 ## API Endpoints
 
