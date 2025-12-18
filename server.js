@@ -1,19 +1,10 @@
 #!/usr/bin/env node
 
 /**
- * Claude Code API Server
+ * Express API Server with OpenAI and Anthropic Compatible Endpoints
  *
- * Production-ready API server for Claude Code CLI integration.
- * Provides OpenAI-compatible and Anthropic-compatible endpoints
- * for seamless integration with any application or workflow automation tool.
- *
- * Hauptfunktionen:
- * - OpenAI-kompatibles API-Format
- * - Flexible Input/Output Formate (text, json, stream-json)
- * - Rate Limiting und Authentifizierung
- * - Strukturiertes Logging
- * - Graceful Shutdown
- * - Process-Management für Claude CLI
+ * Production-ready HTTP API providing dual format support for Claude Code CLI.
+ * Features streaming, rate limiting, authentication, and graceful shutdown.
  */
 
 const express = require('express');
