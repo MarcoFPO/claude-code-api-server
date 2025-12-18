@@ -1,9 +1,8 @@
 /**
- * Logger-Konfiguration mit Winston
+ * Winston-based Structured Logging
  *
- * Stellt einen konfigurierbaren Logger für die Anwendung bereit
- * mit strukturiertem Logging für Produktion und lesbarem Format
- * für die Entwicklung.
+ * Provides configurable logging with JSON format for production
+ * and colorized console output for development.
  */
 
 const winston = require('winston');
