@@ -3,9 +3,9 @@
 /**
  * Claude Code API Server
  *
- * Produktionsreifer API-Server für Claude Code Integration mit n8n.
- * Stellt OpenAI-kompatible Endpoints bereit und fungiert als Proxy
- * zwischen n8n und Claude Code CLI.
+ * Production-ready API server for Claude Code CLI integration.
+ * Provides OpenAI-compatible and Anthropic-compatible endpoints
+ * for seamless integration with any application or workflow automation tool.
  *
  * Hauptfunktionen:
  * - OpenAI-kompatibles API-Format
@@ -105,10 +105,10 @@ app.get('/health', (req, res) => {
 });
 
 /**
- * OpenAI-kompatibler Chat Completions Endpoint (ERWEITERT)
+ * OpenAI-compatible Chat Completions Endpoint (EXTENDED)
  * POST /v1/chat/completions
  *
- * Hauptendpoint für n8n Integration - kompatibel mit OpenAI API
+ * Main endpoint for universal integration - compatible with OpenAI API
  *
  * ERWEITERTE PARAMETER:
  * - input_format: "text" (default) | "stream-json"
@@ -193,11 +193,11 @@ app.post('/v1/chat/completions',
  * Akzeptiert vereinfachtes Input-Format
  */
 /**
- * Anthropic API Kompatibilitäts-Endpoint
+ * Anthropic API Compatibility Endpoint
  * POST /v1/messages
  *
- * Akzeptiert Anthropic API Format und konvertiert zu OpenAI Format
- * Ermöglicht Backward-Compatibility für bestehende n8n Workflows
+ * Accepts Anthropic API format and converts to OpenAI format internally
+ * Enables compatibility for applications using Anthropic API format
  */
 app.post('/v1/messages',
   authMiddleware,

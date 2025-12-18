@@ -1,7 +1,7 @@
 {
   "name": "claude-code-api-local",
   "version": "1.0.0",
-  "description": "Production-ready API server for Claude Code integration with n8n",
+  "description": "Production-ready API server providing OpenAI-compatible and Anthropic-compatible endpoints for Claude Code CLI",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -11,8 +11,9 @@
   "keywords": [
     "claude",
     "api",
-    "n8n",
-    "openai-compatible"
+    "openai-compatible",
+    "anthropic",
+    "claude-code"
   ],
   "author": "MarcoFPO",
   "license": "MIT",

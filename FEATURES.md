@@ -4,15 +4,16 @@
 
 ### ✅ OpenAI-kompatible API
 - Vollständig kompatibel mit OpenAI Chat Completions API
-- Drop-in Replacement für n8n HTTP Request Nodes
+- Drop-in replacement for any OpenAI-compatible HTTP client
 - Standard Request/Response Format
 - Unterstützt model, messages, max_tokens, temperature Parameter
 
 ### ✅ Mehrere Endpoints
-1. **`/v1/chat/completions`** - OpenAI-kompatibel (für n8n)
-2. **`/api/rca`** - Vereinfacht für Root Cause Analysis
-3. **`/health`** - Health-Check für Monitoring
-4. **`/`** - Server-Info und API-Dokumentation
+1. **`/v1/chat/completions`** - OpenAI-compatible format
+2. **`/v1/messages`** - Anthropic-compatible format
+3. **`/api/rca`** - Simplified endpoint for Root Cause Analysis
+4. **`/health`** - Health-Check für Monitoring
+5. **`/`** - Server-Info und API-Dokumentation
 
 ### ✅ Claude Code Integration
 - Startet Claude CLI für jede Anfrage
@@ -169,11 +170,11 @@ Gesamt: 97 Packages (inkl. Sub-Dependencies)
 
 ## 📈 Use-Cases
 
-### n8n Integration
-- AI-gestützte Workflows
-- Automatisierte Analysen
-- Chatbot-Backend
-- Content-Generierung
+### Workflow Automation & Integration
+- AI-powered automation workflows (n8n, Zapier, Make.com)
+- Automated analysis and reporting
+- Chatbot backends
+- Content generation pipelines
 
 ### Root Cause Analysis
 - Server-Probleme diagnostizieren
