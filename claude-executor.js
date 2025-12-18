@@ -1,11 +1,8 @@
 /**
- * Claude Code Executor
+ * Non-streaming Claude CLI Executor
  *
- * Verwaltet die Ausführung von Claude CLI Prozessen:
- * - Startet Claude CLI mit korrekten Parametern
- * - Handled stdin/stdout/stderr Streams
- * - Konvertiert zwischen Formaten
- * - Implementiert Timeout und Cleanup
+ * Manages Claude CLI process execution with format conversion between
+ * text/JSON inputs and outputs. Handles timeouts and process cleanup.
  */
 
 const { spawn } = require('child_process');
