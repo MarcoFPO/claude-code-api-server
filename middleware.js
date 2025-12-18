@@ -1,11 +1,8 @@
 /**
- * Express Middleware für API Server
+ * Express Middleware Collection
  *
- * Enthält alle Middleware-Funktionen:
- * - Request-ID-Generierung
- * - API-Key-Authentifizierung
- * - Request-Validierung
- * - Error-Handling
+ * Provides authentication, request validation, error handling,
+ * request ID tracking, and timing middleware for API server.
  */
 
 const { v4: uuidv4 } = require('uuid');
