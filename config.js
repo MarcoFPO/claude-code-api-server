@@ -1,9 +1,8 @@
 /**
- * Konfiguration für Claude Code API Server
+ * Central Configuration Management
  *
- * Diese Datei enthält alle zentralen Konfigurationsparameter
- * für den API-Server. Werte können über Umgebungsvariablen
- * überschrieben werden.
+ * Manages all server configuration parameters with environment variable support.
+ * Provides defaults for server, Claude CLI, rate limiting, authentication, and logging settings.
  */
 
 module.exports = {
